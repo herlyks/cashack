@@ -1,4 +1,107 @@
+:root {
+  --statusbar-height: 20px;
+  --title-bar-height: 20px;
+  --window-bg: #666;
+  --window-border: 2px solid #000;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
 body {
   background-color: #333;
   color: #eee;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 14px;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+#statusbar {
+  height: var(--statusbar-height);
+  width: 100%;
+  background-color: #000;
+  font-size: 12px;
+  line-height: var(--statusbar-height);
+}
+
+#taskbar {
+  width: 35px;
+  height: calc(100% - var(--statusbar-height));
+  background-color: #222;
+}
+
+#main {
+  position: relative;
+}
+
+#taskbar, #main {
+  float: left;
+}
+
+#taskbar .app-icon {
+  height: 35px;
+  width: 35px;
+  border: 2px solid transparent;
+  text-align: center;
+  line-height: 33px;
+  cursor: pointer;
+}
+#taskbar .app-icon:hover {
+  border-color: #fff;
+}
+
+.app-window {
+  height: 300px;
+  width: 400px;
+  border: var(--window-border);
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+
+.app-window .app-title-bar {
+  height: var(--title-bar-height);
+  border-bottom: var(--window-border);
+  background-color: var(--window-bg);
+  line-height: var(--title-bar-height);
+}
+
+.app-window .app-title-bar minimize,
+.app-window .app-title-bar maximize,
+.app-window .app-title-bar close {
+  margin-right: 4px;
+  cursor: default;
+}
+.app-window .app-title-bar minimize:hover,
+.app-window .app-title-bar maximize:hover,
+.app-window .app-title-bar close:hover {
+  color: #000;
+}
+
+.app-window .app-body {
+  height: calc(100% - var(--title-bar-height));
+  width: 100%;
+  background-color: var(--window-bg);
+}
+
+.app-window.red .app-body {
+  background-color: red;
+}
+.app-window.green .app-body {
+  background-color: green;
+}
+.app-window.blue .app-body {
+  background-color: blue;
+}
+
+/* ************************************************************************* */
+
+.pull-right {
+  float: right;
 }
