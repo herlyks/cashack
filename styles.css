@@ -1,14 +1,15 @@
-:root {
-  --statusbar-height: 20px;
-  --title-bar-height: 20px;
-  --window-bg: #666;
-  --window-border: 2px solid #000;
-}
-
 html, body {
   height: 100%;
   width: 100%;
   margin: 0;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.pull-right {
+  float: right;
 }
 
 body {
@@ -18,22 +19,29 @@ body {
   font-size: 14px;
 }
 
-div {
-  box-sizing: border-box;
-}
-
 #statusbar {
-  height: var(--statusbar-height);
+  height: 20px;
   width: 100%;
   background-color: #000;
   font-size: 12px;
-  line-height: var(--statusbar-height);
+  line-height: 20px;
 }
 
 #taskbar {
   width: 35px;
-  height: calc(100% - var(--statusbar-height));
+  height: calc(100% - 20px);
   background-color: #222;
+}
+#taskbar .app-icon {
+  height: 35px;
+  width: 35px;
+  border: 2px solid transparent;
+  text-align: center;
+  line-height: 33px;
+  cursor: pointer;
+}
+#taskbar .app-icon:hover {
+  border-color: #000;
 }
 
 #main {
@@ -44,34 +52,20 @@ div {
   float: left;
 }
 
-#taskbar .app-icon {
-  height: 35px;
-  width: 35px;
-  border: 2px solid transparent;
-  text-align: center;
-  line-height: 33px;
-  cursor: pointer;
-}
-#taskbar .app-icon:hover {
-  border-color: #fff;
-}
-
 .app-window {
   height: 300px;
   width: 400px;
-  border: var(--window-border);
+  border: 2px solid #000;
   position: absolute;
   top: 20px;
   left: 30px;
 }
-
 .app-window .app-title-bar {
-  height: var(--title-bar-height);
-  border-bottom: var(--window-border);
-  background-color: var(--window-bg);
-  line-height: var(--title-bar-height);
+  height: 20px;
+  border-bottom: 2px solid #000;
+  background-color: #666;
+  line-height: 20px;
 }
-
 .app-window .app-title-bar minimize,
 .app-window .app-title-bar maximize,
 .app-window .app-title-bar close {
@@ -83,13 +77,11 @@ div {
 .app-window .app-title-bar close:hover {
   color: #000;
 }
-
 .app-window .app-body {
-  height: calc(100% - var(--title-bar-height));
+  height: calc(100% - 20px);
   width: 100%;
-  background-color: var(--window-bg);
+  background-color: #666;
 }
-
 .app-window.red .app-body {
   background-color: red;
 }
@@ -100,8 +92,4 @@ div {
   background-color: blue;
 }
 
-/* ************************************************************************* */
-
-.pull-right {
-  float: right;
-}
+/*# sourceMappingURL=styles.css.map */

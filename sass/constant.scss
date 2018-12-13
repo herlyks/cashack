@@ -1,0 +1,13 @@
+$colors: (
+  black: #333,
+  white: #eee,
+  pure-black: #000,
+  pure-white: #fff,
+  semi-black: #666
+);
+
+$statusbar-height: 20px;
+
+$window-bg: map-get($colors, semi-black);
+$window-border: 2px solid map-get($colors, pure-black);
+$title-bar-height: 20px;

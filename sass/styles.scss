@@ -1,0 +1,17 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.pull-right {
+  float: right;
+}
+
+@import "constant";
+@import "desktop";
+@import "window";

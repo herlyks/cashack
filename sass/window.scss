@@ -1,0 +1,42 @@
+.app-window {
+  height: 300px;
+  width: 400px;
+  border: $window-border;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+
+  .app-title-bar {
+    height: $title-bar-height;
+    border-bottom: $window-border;
+    background-color: $window-bg;
+    line-height: $title-bar-height;
+
+    minimize,
+    maximize,
+    close {
+      margin-right: 4px;
+      cursor: default;
+
+      &:hover {
+        color: map-get($colors, pure-black);
+      }
+    }
+  }
+
+  .app-body {
+    height: calc(100% - #{$title-bar-height});
+    width: 100%;
+    background-color: $window-bg;
+  }
+
+  &.red .app-body {
+    background-color: red;
+  }
+  &.green .app-body {
+    background-color: green;
+  }
+  &.blue .app-body {
+    background-color: blue;
+  }
+}

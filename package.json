@@ -1,0 +1,24 @@
+{
+  "name": "cashack",
+  "version": "1.0.0",
+  "description": "A game inspired by Introversion's Uplink: Hacker Elite...",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node \"./node_modules/sass/sass.js\" --watch ./sass/styles.scss:./styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/herlyks/cashack.git"
+  },
+  "author": "herlyks",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/herlyks/cashack/issues"
+  },
+  "homepage": "https://github.com/herlyks/cashack#readme",
+  "dependencies": {
+    "jquery": "3.3.1",
+    "sass": "1.15.2"
+  }
+}

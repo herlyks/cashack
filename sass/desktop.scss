@@ -1,0 +1,41 @@
+body {
+  background-color: map-get($colors, black);
+  color: map-get($colors, white);
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 14px;
+}
+
+#statusbar {
+  height: $statusbar-height;
+  width: 100%;
+  background-color: map-get($colors, pure-black);
+  font-size: 12px;
+  line-height: $statusbar-height;
+}
+
+#taskbar {
+  width: 35px;
+  height: calc(100% - #{$statusbar-height});
+  background-color: #222;
+
+  .app-icon {
+    height: 35px;
+    width: 35px;
+    border: 2px solid transparent;
+    text-align: center;
+    line-height: 33px;
+    cursor: pointer;
+
+    &:hover {
+      border-color: map-get($colors, pure-black);
+    }
+  }
+}
+
+#main {
+  position: relative;
+}
+
+#taskbar, #main {
+  float: left;
+}
